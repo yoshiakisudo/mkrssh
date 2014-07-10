@@ -2,7 +2,7 @@
 
 if [ $1 ] 
 then
-  gethost-mackerel.rb --service $1 | percol | cut -d ',' -f 1  | cut -d ':' -f 2 |  pbcopy && ssh `pbpaste`
+  gethost-mackerel.rb --service $1 | percol |  pbcopy && ssh `pbpaste`
 else
-  gethost-mackerel.rb | percol | cut -d ',' -f 1  | cut -d ':' -f 2 |  pbcopy && ssh `pbpaste`
+  gethost-mackerel.rb | percol |  pbcopy && ssh `pbpaste`
 fi
